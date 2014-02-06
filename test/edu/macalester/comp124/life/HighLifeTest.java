@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
  * @author Michael Ekstrand <ekstrand@cs.umn.edu>
  *
  */
-public class ConwayTest {
+public class HighLifeTest {
 
     private RuleSet rules;
 
@@ -25,7 +25,7 @@ public class ConwayTest {
     @Before
     public void setUp() throws Exception {
         // create a new rule set
-        rules = new Conway();
+        rules = new HighLife();
     }
 
     /**
@@ -55,7 +55,6 @@ public class ConwayTest {
     public void testStayDead() {
         assertFalse(rules.applyRules(false, 2));
         assertFalse(rules.applyRules(false, 4));
-        assertFalse(rules.applyRules(false, 6));
         assertFalse(rules.applyRules(false, 8));
     }
 
